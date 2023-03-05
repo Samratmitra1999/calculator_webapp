@@ -1,4 +1,4 @@
-# Samrat Mitra.github.io
+# calculator_web_app
 A calculator web app created using html, css and javascript.
 Features of the Calculator
 In this project, you are going to develop a calculator that will have the following features:
