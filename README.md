@@ -21,3 +21,6 @@ Display Screen: It displays the mathematical expression and the result.
 Clear Screen Button: It clears all mathematical values.
 
 Calculate button (=): It evaluates the mathematical expression and returns the result.
+
+![Screenshot (156)](https://user-images.githubusercontent.com/81224052/222948207-dda32d70-d078-496c-9691-b4be1f4f07bb.png)
+
