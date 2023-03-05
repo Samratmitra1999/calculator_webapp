@@ -1,0 +1,110 @@
+body {
+	
+  background: rgb(238,174,202);
+  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+
+}
+.calculator-heading {
+  animation-name: heading-animation;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes heading-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.textview{
+  display: inline-block;
+	margin: 4px;
+	width: 198px;
+	height: 29px;
+	font-size: 20px;
+    font-weight: bold;
+    background-color: rgba(245, 242, 237, 0.589);
+	border: none;
+}
+
+.equalButton {
+    cursor: pointer;
+	display: inline-block;
+	margin: 2px;
+	width: 42px;
+	height:91px;
+    outline: none;
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 10px;
+  
+}
+
+.button {
+    cursor: pointer;
+	display: inline-block;
+	margin: 2px;
+	width: 42px;
+	height: 42px;
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 10px;
+	outline: none;
+  
+}
+
+.button:active, .allclearButton:active,.equalButton:active{
+    background-color: #3e8e41;
+    box-shadow: 0 3px #666;
+    transform: translateY(4px);
+  }
+
+
+
+.button:hover,.equalButton:hover {
+	background-color: #c26ec5;
+	box-shadow: 0px 0px 2px #ff75f4, inset 0px -20px 1px #923c7d;
+	border-top: 2px solid #FFF;
+	border-right: 2px solid #e977c7;
+	border-bottom: 2px solid #dd5dd7;
+	border-left: 2px solid #dd60d7;
+}
+
+.allclearButton {
+  border-radius: 10px;
+	color: #FFF;
+    margin: 2px;
+	width: 42px;
+	height: 42px;
+	text-shadow: -1px -1px 0px #44006F;
+	background-color: #D20000;
+	border-top: 2px solid #FF8484;
+	border-right: 2px solid #FF8484;
+	border-bottom: 2px solid #800000;
+	border-left: 2px solid #800000;
+	box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #B00000;
+	outline: none;
+}
+
+h1{
+	color:#F1620B;
+	font-size: 52px;
+    text-justify: newspaper;
+    text-align: center;
+
+}
+.container{
+		background: rgba(68, 67, 68, 0.589);
+		/* background-size: 100px 80px; */
+		background-size: cover;
+		position:absolute;
+        top:50%;
+        left:50%;
+        transform:translateX(-50%) translateY(-50%)
+}
