@@ -118,7 +118,7 @@ body {
 
 .envelope:hover .letter {
   transform: translateY(-100px);
-  z-index: 2;
+  z-index: 4;
 }
 
 /* Heading Text Styling */
