@@ -1,0 +1,208 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(90deg, #ff6ec7, #ff9a9e, #ffcdff);
+  background-size: 400% 400%;
+  animation: gradientTransition 4s ease infinite; /* Faster gradient animation */
+}
+
+@keyframes gradientTransition {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Envelope Container */
+.envelope {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.envelope:hover {
+  transform: scale(1.05);
+}
+
+/* Envelope Back */
+.back {
+  position: relative;
+  width: 250px;
+  height: 200px;
+  background: linear-gradient(145deg, #d527ff, #ff8adb);
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Envelope Front */
+.front {
+  position: absolute;
+  border-right: 130px solid #ec64d5;
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+  height: 0;
+  width: 0;
+  top: 0;
+  left: 120px;
+  z-index: 3;
+}
+
+.front:before {
+  content: "";
+  position: absolute;
+  border-left: 130px solid #f57bc3;
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+  height: 0;
+  width: 0;
+  top: -100px;
+  left: -120px;
+}
+
+.front:after {
+  content: "";
+  position: absolute;
+  border-bottom: 105px solid #f984b9;
+  border-left: 125px solid transparent;
+  border-right: 125px solid transparent;
+  height: 0;
+  width: 0;
+  top: -5px;
+  left: -120px;
+}
+
+/* Envelope Top Flap */
+.top {
+  position: absolute;
+  border-top: 105px solid #fc6fe4;
+  border-left: 125px solid transparent;
+  border-right: 125px solid transparent;
+  height: 0;
+  width: 0;
+  top: 0;
+  transform-origin: top;
+  transition: 0.4s ease-in-out;
+}
+
+.envelope:hover .top {
+  transform: rotateX(160deg);
+}
+
+/* Letter Inside */
+.letter {
+  position: absolute;
+  background: #ffffff;
+  width: 230px;
+  height: 180px;
+  top: 10px;
+  left: 10px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease-in-out;
+}
+
+.envelope:hover .letter {
+  transform: translateY(-100px);
+  z-index: 2;
+}
+
+/* Heading Text Styling */
+.text1 {
+  position: absolute;
+  color: #fff;
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+  text-align: center;
+  top: -100%; /* Adjusted to be above the front flap */
+  left: 50%;
+  transform: translateX(-50%); /* Centers the text horizontally */
+  white-space: nowrap; /* Prevents text from wrapping */
+  z-index: 5; /* Ensures it's above the letter and envelope */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  animation: textColorChange 4s ease infinite; /* Apply text color animation */
+}
+
+@keyframes textColorChange {
+  0% {
+    color: #fff;
+  }
+  50% {
+    color: #fc85a9; /* Change to pinkish color */
+  }
+  100% {
+    color: #fff; /* Back to the original color */
+  }
+}
+
+/* Letter Text Content */
+.text {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  top: -20px;
+  left: 20px;
+}
+
+/* Heart Animation */
+.heart {
+  background-color: #ff6b6b;
+  height: 70px;
+  width: 70px;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  transform: rotate(-45deg);
+  box-shadow: -5px 10px 90px rgba(255, 107, 107, 0.5);
+  animation: untoldcoding 0.8s linear infinite;
+}
+
+@keyframes untoldcoding {
+  0% {
+    transform: rotate(-45deg) scale(1.05);
+  }
+  70% {
+    transform: rotate(-45deg) scale(1);
+  }
+  100% {
+    transform: rotate(-45deg) scale(0.9);
+  }
+}
+
+.heart:before {
+  content: "";
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  background-color: #ff5252;
+  top: -40px;
+  border-radius: 50px;
+}
+
+.heart:after {
+  content: "";
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  background-color: #ff5252;
+  right: -40px;
+  border-radius: 50px;
+}
